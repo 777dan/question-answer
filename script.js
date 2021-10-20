@@ -4,22 +4,16 @@ let questions = [
     "Что мне взять с собой в школу?",
     "Что мне взять с собой в бассейн?",
 ];
-let answers = ["коньки", "яблоки", "учебники", "полотенце", "куртку", "бананы"];
+let answers = ["коньки", "яблоки", "учебники", "полотенце"];
 
-let rand = Math.floor(Math.random() * questions.length);
 function randomArrayValue(arr) {
+    let rand = getRandomInt(n = answers.length);
     return arr[rand];
 }
-let rand1 = Math.floor(Math.random() * answers.length);
-function getRandomInt(n) {
-    return n[rand1]
-}
-let rand2 = Math.floor(Math.random() * answers.length);
-function getRandomInt1(n) {
-    return n[rand2]
+function getRandomInt(n = answers.length) {
+    return Math.floor(Math.random() * n);
 }
 
 let question = randomArrayValue(questions);
-let answer = getRandomInt(answers);
-let answer1 = getRandomInt1(answers);
-alert(question + ": " + answer + ", " + answer1);
+let answer = randomArrayValue(answers);
+alert(question + ": " + answer);
