@@ -7,7 +7,7 @@ let questions = [
 let answers = ["коньки", "яблоки", "учебники", "полотенце"];
 
 function randomArrayValue(arr) {
-    let rand = getRandomInt(n = answers.length);
+    let rand = getRandomInt(answers.length);
     return arr[rand];
 }
 function getRandomInt(n = answers.length) {
